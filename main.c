@@ -1,25 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define SIZE 5
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(void) 
+int main(void)
 {
     int i;
-    int grade[SIZE];
-    int score[SIZE];
-
-    for(i=0; i<SIZE; i++)
-    {    
-	    grade[i]=rand()%100;
-        printf("grade[%d]=%d\n", i, grade[i]);
-    }
-
-//배열값 복사 
-    for(i=0; i<SIZE; i++)
-        score[i]=grade[i];
+    int a[SIZE] = {1,2,3,4,5};
+    int b[SIZE] = {1,1,3,5,5};
+    int flag_same = 1;
 
     for(i=0;i<SIZE;i++)
-        printf("score[%d]=%d\n", i, score[i]);
+    {
+        if (a[i] != b[i])
+            printf("index %i different!\n", i);
+    }
+
     return 0;
 }
